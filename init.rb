@@ -21,5 +21,5 @@ end
 
 ActionDispatch::Callbacks.to_prepare do
   require 'redmine_didyoumean/hooks/didyoumean_hooks'
-  IssuesHelper.send :include, RedmineDidyoumean::Patches::SearchIssuesHelperPatch
+  IssuesController.send :include, RedmineDidyoumean::Patches::IssuesControllerPatch
 end
